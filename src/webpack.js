@@ -67,7 +67,10 @@ const webpackSettings = (_assetPath, settings) => {
 
 const setupDevMiddleware = (app, _assetPath, settings) => {
   const _webpack = webpack(webpackSettings(_assetPath, settings));
-  app.use(webpackDev(_webpack, { publicPath: '/assets/' }));
+  app.use(webpackDev(_webpack, {
+    publicPath: '/assets/',
+    noInfo: true
+  }));
 };
 
 const configureWebpack = (app, baseUrl, settings) => {
