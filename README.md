@@ -40,5 +40,21 @@ make
 
 Once complete you will be dropped in to a shell where you can run `yarn`.
 
+If you are actively working on look-and-feel it's useful to link symlink the node module to the 
+code itself so you can hot reload as you change
+
+ ```usr/src/app > yarn link
+usr/src/app > cd examples/test-app
+usr/src/app/examples/test-app > yarn link @hmcts/look-and-feel
+```
+
 [Dockerfile]:https://github.com/hmcts/nodejs-one-per-page/blob/master/Dockerfile
 [docker-compose.yml]:https://github.com/hmcts/nodejs-one-per-page/blob/master/docker-compose.yml
+
+To serve the documentation and examples:
+
+```
+cd examples/test-app
+yarn install
+yarn start-dev
+```
